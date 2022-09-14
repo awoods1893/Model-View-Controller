@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 
+//use env files to obfuscate important DB information. .env file is in the .gitignore and not pushed to the repo
 require('dotenv').config();
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
