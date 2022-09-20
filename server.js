@@ -1,10 +1,11 @@
 const path = require("path");
+require('dotenv').config();
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 
 const app = express();
-const PORT = process.env.DB_PORT || 3001;
+const PORT = process.env.DB_PORT;
 
 const sequelize = require("./config/connection.js");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
